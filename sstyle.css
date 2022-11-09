@@ -1,0 +1,392 @@
+/* css reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  * {
+    margin: 0;
+  }
+  html, body {
+    height: 100%;
+  }
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  input, button, textarea, select {
+    font: inherit;
+  }
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+
+  /* --css variables ---*/
+  :root{
+/* ---primary colors */
+--linear-gradient: hsl(249,99%,64%);
+--active-border:hsl(278,94%,30%);
+--red:hsl(0, 100%,66%);
+
+/* ---neutral colors-- */
+--white: hsl(0, 0%, 100%);
+--light-grayish-violet: hsl(270, 3%, 87%);
+--dark-grayish-violet: hsl(279, 6%,55%);
+--very-dark-violet: hsl(278, 68%, 11%);
+
+/* ---fonts----- */
+--font-size: 18px;
+--font-family:'Space Grotesk', sans-serif;
+  }
+
+  /* --main styling */
+  body{
+    font-size: var(--font-size);
+    font-family: var(--font-family);
+  }
+  main{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  
+  }
+  
+  .secondcontainer{
+    display: none;
+  }
+  .frontcard{
+    position: absolute;
+    top: 6.3em;
+    left: 2em;
+    object-fit: contain;
+    max-width: 250px;
+  }
+  
+  .backcard{
+   position: absolute;
+    top: 2em;
+    right: 2em;
+    object-fit: contain;
+    max-width: 250px;
+  }
+  .logo{
+    position: absolute;
+    top: 7.4em;
+    left: 3em;
+    object-fit: contain;
+    width: 60px;
+  }
+  .display1{
+    position: absolute;
+    top: 10em;
+    color: var(--white);
+    left: 3em;
+  }
+  .display2{
+    position: absolute; 
+    top: 17.5em;
+    font-size: 0.7em;
+    left: 4em;
+    color: var(--white);
+    
+  } 
+  .display3{
+    position: absolute; 
+    top: 17.5em;
+    left: 17em;
+    color: var(--white);
+    font-size: 0.7em;
+  }
+  .zeronumbers{
+    position: absolute;
+    top: 7.5em;
+    right: 5em;
+    color: var(--white);
+    font-size: 0.7em;
+  }
+  
+  article{
+    background-color: var(--very-dark-violet);
+
+  }
+  form{
+    background-color: var(--white);
+    padding-top: 3em;
+    padding-left: 2em;
+    padding-right: 2em; 
+    padding-bottom: 3em;
+    display: none;
+
+  }
+  .tab{
+    margin-bottom: 1.2em;
+  }
+  .divide{
+  display:grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  gap: 1.5em;
+
+  
+  }
+  .subm{
+    width: 100%;
+    padding: 0.8em;
+    color: var(--white);
+    background-color: var(--very-dark-violet);
+    border:solid var(--light-grayish-violet);
+    border-radius: 10px;
+  }
+  input{
+padding: 0.5em;
+width: 100%;
+border-radius: 10px;
+border-radius: 10px;
+border:solid var(--light-grayish-violet)
+  }
+   span{
+     margin-left: 12em; 
+    
+  } 
+
+
+  /* --------second component */
+  section{
+    display: flex;
+    flex-direction: column;
+    gap: 1.8em;
+   padding: 2em;
+   align-items: center;
+  }
+  .done{
+    object-fit: contain;
+    width: 90px;
+    padding-top: 1.9em;
+  }
+  .continue{
+    width: 100%;
+    padding: 0.8em;
+    color: var(--white);
+    background-color: var(--very-dark-violet);
+    border:solid var(--light-grayish-violet);
+    border-radius: 10px;
+  }
+   /* ----media query */
+  @media screen and (min-width: 510px){
+
+    .done{
+      padding-top: 4em;
+    }
+  .frontcard{
+    top: 7.6em;
+    left: 5em;
+    max-width: 330px;
+  }
+  
+  .backcard{
+    top: 2em;
+    right: 2em;
+    max-width: 330px;
+}
+.logo{
+  top: 8.5em;
+  left: 6.5em;
+}
+.display1{
+  top: 12em;
+  color: var(--white);
+  left: 6.5em;
+  word-spacing: 1.2em;
+}
+.display2{
+  top: 22em;
+  left: 9em;
+ 
+  
+} 
+.display3{
+  top: 22em;
+  left: 26em;
+
+}
+.zeronumbers{
+  top: 9.3em;
+  right: 6.8em;
+  
+}
+form{
+  padding-top: 6em;
+}
+  }
+  /* ------------------------------------- */
+  @media screen and (min-width:690px){
+    .done{
+      padding-top: 7.7em;
+    }
+.frontcard{
+  top: 9.5em;
+  left: 8em;
+  max-width: 380px;
+}
+
+.backcard{
+  top: 3em;
+  right: 2em;
+  max-width: 380px;
+  }
+  .logo{
+    top: 10.8em;
+    left: 10em;
+    width: 80px;
+  }
+  .display1{
+    top: 14.5em;
+    left: 10em;
+  }
+  .display2{
+    top: 26em;
+    left: 14em;
+   
+    
+  } 
+  .display3{
+    top: 26em;
+    left: 35em;
+  
+  }
+  .zeronumbers{
+    top: 11.8em;
+    right: 6.8em;
+    
+    
+  }
+  form{
+    padding-top: 11em;
+  }
+}
+
+
+
+
+
+/* ----------last media query------ */
+
+
+
+
+@media screen and (min-width:800px){
+  .done{
+    padding-top: 9em;
+  }
+  .firstcontainer{
+display: none;
+  }
+  .secondcontainer{
+    display: flex;
+    width: 350px;
+  }
+  main{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+  }
+    .frontcard{
+      top: 5.5em;
+      left: 2.5em;
+      max-width: 340px;
+    }
+    
+    .backcard{
+      top: 17.9em;
+      left: 6.5em;
+      max-width: 340px;
+      box-shadow: 50px 20px 20px -20px var(--light-grayish-violet);
+      }
+      .logo{
+        top: 6.8em;
+        left: 3.7em;
+        width: 80px;
+      }
+      .display1{
+        top: 10.5em;
+        left: 3.7em;
+      }
+      .display2{
+        top: 19em;
+        left: 5em;  
+      } 
+      .display3{
+        top: 19em;
+        left: 24em;
+     
+      }
+      .zeronumbers{
+        top: 32.3em;
+        left: 30em; 
+      }
+      form{
+        font-size: 14px;
+        width: 650px;
+        padding-left: 16em;
+
+      }
+      section{
+        margin-left: 8em;
+      }
+    }
+/* ------------------------------ */
+@media screen and (min-width:990px){
+  .secondcontainer{
+    display: flex;
+    width: 450px;
+  }
+  
+    .frontcard{
+      top: 5.5em;
+      left: 8em;
+      max-width: 360px;
+    }
+    
+    .backcard{
+      top: 17.9em;
+      left: 11.5em;
+      max-width: 360px;
+      
+      }
+      .logo{
+        top: 6.8em;
+        left: 9.7em;
+        width: 80px;
+      }
+      .display1{
+        top: 10.5em;
+        left: 9.7em;
+      }
+      .display2{
+        top: 19em;
+        left: 13.7em;  
+      } 
+      .display3{
+        top: 19em;
+        left: 33em;
+     
+      }
+      .zeronumbers{
+        top: 32.3em;
+        left: 39em; 
+      }
+      form{
+        font-size: 14px;
+        width: 800px;
+        padding-left: 20em; 
+
+      }
+       .subm{
+        padding: 1.3em;
+      }
+      section{
+        margin-left: 14em;
+        width: 500px;
+      }
+}  
