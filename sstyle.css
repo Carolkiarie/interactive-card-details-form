@@ -42,6 +42,12 @@
   }
 
   /* --main styling */
+  .invalid{
+    border: 2px solid red;
+  }
+  .success{
+    border: 2px solid green;
+  }
   body{
     font-size: var(--font-size);
     font-family: var(--font-family);
@@ -117,8 +123,11 @@
     padding-left: 2em;
     padding-right: 2em; 
     padding-bottom: 3em;
-    display: none;
+    display: block;
 
+  }
+  #error{
+    color: var(--red);
   }
   .tab{
     margin-bottom: 1.2em;
@@ -145,6 +154,9 @@ border-radius: 10px;
 border-radius: 10px;
 border:solid var(--light-grayish-violet)
   }
+  input:focus{
+    outline: none;
+  }
    span{
      margin-left: 12em; 
     
@@ -153,7 +165,7 @@ border:solid var(--light-grayish-violet)
 
   /* --------second component */
   section{
-    display: flex;
+    display: none;
     flex-direction: column;
     gap: 1.8em;
    padding: 2em;
